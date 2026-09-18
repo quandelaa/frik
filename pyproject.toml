@@ -1,0 +1,20 @@
+[project]
+name = "frik"
+version = "0.0.1"
+description = "A Wayland-exclusive screenshot tool that extracts text from your screenshot"
+readme = "README.md"
+authors = [
+    { name = "quandelaa", email = "sergiotobamasilalahi@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pyperclip>=1.11.0",
+    "pytesseract>=0.3.13",
+]
+
+[project.scripts]
+frik = "frik.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
