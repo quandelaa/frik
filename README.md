@@ -16,7 +16,7 @@ pip install frik
 
 uv
 ```bash
-uv tool install pitt
+uv tool install frik
 ```
 
 ## Usage
