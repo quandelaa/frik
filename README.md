@@ -4,7 +4,6 @@ A Wayland-exclusive screenshot tool that extracts text from your screenshot
 
 # Prerequisites:
 
-- grim
 - tesseract packages and language data or smth
 
 ## Installation
