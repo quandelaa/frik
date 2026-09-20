@@ -1,6 +1,6 @@
 [project]
 name = "frik"
-version = "1.0.0"
+version = "1.0.1"
 description = "A Wayland-exclusive screenshot tool that extracts text from your screenshot"
 readme = "README.md"
 authors = [
