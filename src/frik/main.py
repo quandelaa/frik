@@ -1,20 +1,23 @@
 from pytesseract import image_to_string
-from datetime import datetime
 from subprocess import run
 from pyperclip import copy
 
+from PIL import ImageGrab
+
 def main() -> None:
-    cords = run(['slurp'], capture_output=True).stdout.decode().strip()
+    cords = run(['slurp'], capture_output=True).stdout.decode().strip().split(" ")
 
     if cords == "":
         print("cancelling..")
         return
 
-    path = f"/home/quandela/Images/frik_{datetime.now()}.png"
-    run(['grim', '-g', cords, path])
+    left, upper = cords[0].split(",")
+    length, height = cords[1].split("x")
 
-    print(f"saved screenshot in {path}\n")
-    text = get_text(path).strip()
+    bbox = (int(left), int(upper), int(left)+int(length), int(upper)+int(height))
+    image = ImageGrab.grab(bbox)
+
+    text = get_text(image).strip()
 
     if text == "":
         print("no text recognized.. exiting")
