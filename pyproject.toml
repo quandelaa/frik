@@ -1,11 +1,12 @@
 [project]
 name = "frik"
-version = "0.0.1"
+version = "1.0.0"
 description = "A Wayland-exclusive screenshot tool that extracts text from your screenshot"
 readme = "README.md"
 authors = [
     { name = "quandelaa", email = "sergiotobamasilalahi@gmail.com" }
 ]
+keywords = ["screenshot", "wayland", "cli"]
 requires-python = ">=3.12"
 dependencies = [
     "pyperclip>=1.11.0",
@@ -14,6 +15,9 @@ dependencies = [
 
 [project.scripts]
 frik = "frik.main:main"
+
+[project.urls]
+Repository = "https://github.com/quandelaa/pitt"
 
 [build-system]
 requires = ["uv_build>=0.12.10,<0.13.0"]
