@@ -17,7 +17,7 @@ def main() -> None:
     bbox = (int(left), int(upper), int(left)+int(length), int(upper)+int(height))
     image = ImageGrab.grab(bbox)
 
-    text = get_text(image).strip()
+    text = get_text(image).strip().replace("\n", " ")
 
     if text == "":
         print("no text recognized.. exiting")
